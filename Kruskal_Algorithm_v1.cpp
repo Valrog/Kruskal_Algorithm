@@ -17,9 +17,9 @@
 
 // ------------------ FUNCTION PROTOTYPES ------------------
 
-void Kruskal(std::vector<Edge> graph, int numVertices, std::vector<Edge> &minTree, int &treeCost); // Poisce minimalno vpeto drevo grafa
-bool OrderCost(const Edge &left, const Edge &right); // Funckija za urejanje po ceni povezav
-void TreeOutput(const std::vector<Edge> tree); // Izpise minimalno vpeto drevo
+void Kruskal(std::vector<Edge> graph, int numVertices, std::vector<Edge> &minTree, int &treeCost); // Calculates the Minimum Spanning Tree of a given graph
+bool OrderCost(const Edge &left, const Edge &right); // Function that orders edges by their cost, min to max
+void TreeOutput(const std::vector<Edge> tree); // Prints out the Minimum Spanning Tree
 
 
 int _tmain(int argc, _TCHAR* argv[])
@@ -104,12 +104,12 @@ void Kruskal(std::vector<Edge> graph, int numVertices, std::vector<Edge> &minTre
 			std::cout << "\nEdge (" << graph[i].u << ", " << graph[i].v << ") " << "was not accepted." << std::endl;
 		}
 
-		else // (u,v) doesn't creat a cycle, we add it to the tree and update the cluster
+		else // (u,v) doesn't creat a cycle, it adds it to the tree and update the cluster
 		{
 			minTree.emplace_back(graph[i].u, graph[i].v, graph[i].cost); // Adds edge (u, v) to the tree
 			std::cout << "\nEdge (" << graph[i].u << ", " << graph[i].v << ") " << "was added." << std::endl;
 
-			costTree += graph[i].cost; // Adds the cost of new edge
+			costTree += graph[i].cost; // Adds the cost of a new edge
 
 			temp = cluster[graph[i].u]; // Remembers the "names" of sets, that need to be combined
 			tmp = cluster[graph[i].v];
