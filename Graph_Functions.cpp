@@ -5,7 +5,7 @@
 
 
 #include "stdafx.h"
-#include "Graph_Functions.h" // Includa header od graphov
+#include "Graph_Functions.h"
 
 #include <fstream>
 #include <iostream>
@@ -31,7 +31,7 @@ void ReadGraph(std::string fname, std::vector<Edge> &graph, int &numV, int &numE
 		int u, v, cost;
 
 		if (dat.good())
-			dat >> numV >> numE; // Saves number of vertices and edges from file
+			dat >> numV >> numE; // Saves number of vertices and edges from the file
 		else
 			std::cout << "\nProblem with reading from file." << std::endl;
 
