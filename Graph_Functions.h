@@ -1,5 +1,5 @@
 // Graph_Functions.h
-// Declaration of methods and data structures needed for graphs
+// Declaration of methods and data structures needed for working with graphs
 // http://www.umich.edu/~eecs381/handouts/CppHeaderFileGuidelines.pdf
 // http://stackoverflow.com/questions/6500313/c-why-should-new-be-used-as-little-as-possible
 
